@@ -1,0 +1,43 @@
+<p></p>
+<p></p>
+
+<div class="border">
+<u><h1 > ---hello {{customer.name}}---</h1></u>
+
+<span class="p" id="p">your sum of month is: {{customer.sum}} </span>
+<span class="p">you can take {{customer.max}} books</span>
+</div>
+<button class="custom-btn btn-7"(click)="openNewLend()"><span>{{new}} lend</span></button><br/>
+<button class="custom-btn btn-7"(click)="openyourbook()"><span>your book on loan</span></button>
+
+<span><h2 class="">your account that you dont pay:</h2></span>
+<ul *ngFor="let a of account;let i=index">
+    <li *ngIf="a.customerId==customer.id && a.pay==false">
+            <input type="checkbox" (click)="putPay(i)"[(ngModel)]="a.pay">
+            <label class="label"> in month {{a.month}} is you dont pay</label>
+            
+    </li>
+</ul>
+<div *ngIf="newLend">
+    <div class="input">
+    <label>put date to lend:</label><br>
+    <input type="date"[(ngModel)]="dateToLend" (chang)="postLend()">
+    <input type="button" value="end lend" (click)="putLend()">
+</div>
+<h2>you take {{counter}} books</h2>
+<div *ngFor="let b of book" >
+ <app-book (clickBtn)="click()"[book]="b"[id]="b.id"[name]="b.name"[count]="b.count"[writerId]="b.writerId"[sumCounter]="flag"[lendId]="lendId"[nameBtn]="nameBtn1"></app-book>
+</div>
+</div>
+<div *ngIf="yourLoan" class="son">
+    <div *ngFor="let you of bookOnLoan">
+        <div *ngFor="let l of lendArr">
+            <div *ngFor="let b of book">
+            <div *ngIf="l.id==you.lendId && you.bookId==b.id">
+           <app-book  [book]="b"[id]="b.id"[name]="b.name"[count]="b.count"[writerId]="b.writerId"[sumCounter]="flag"[lendId]="lendId"[nameBtn]="nameBtn2"></app-book>
+       </div>
+    </div>
+    </div>
+    </div>
+</div>
+

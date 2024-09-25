@@ -1,0 +1,37 @@
+<h1> my library </h1>
+<button class="custom-btn btn-7" (click)="openBook()"><span>open list book</span></button>
+<div class="card-container">
+    <div id="main-card"*ngFor="let c of customers">
+    <div class="cover-photo"></div>
+     <div class="photo">
+      <img src="https://avatars.githubusercontent.com/u/41117245?v=4" alt="">
+    </div> 
+     <div class="content2">
+      <h3 class="name">{{c.name}}</h3>
+      <h3 class="sum of  month">{{c.sum}}<br />   </h3>
+       <h3 class="sum of  month">{{c.max}}<br /></h3>
+        <h3 *ngFor="let a of account">
+          <span *ngIf="a.customerId==c.id&&pay==true">customerId:{{a.customerId}} month: {{a.month}} pay:{{a.pay}} </span>
+       </h3>
+       <input class="btn"type="button" value="delete" (click)="deleteCustomer(c)"/>
+       <input class="btn" type="button" value="Presentation of payments" (click)="payment()"/>
+    </div> 
+  </div>
+  <div *ngIf="open==true"id="notebooks" ng-app="notebooks" ng-controller="NotebookListCtrl">
+    list of book:
+    <ul *ngFor="let c of customers" id="notebook_ul">
+      <li ng-repeat="notebook in notebooks | filter:query | orderBy: orderList">
+        name customer:{{c.name}}<br/>
+          <div *ngFor="let l of lend">
+            <div *ngFor="let b of bookOnLoan">
+          <div *ngIf="c.id==l.customerId && l.id==b.lendId ">
+             bookId:{{b.bookId}}<br/>
+        </div>
+      </div>
+      </div>
+        <div class="right top"></div>
+      </li>
+    </ul>
+  </div>  
+</div>
+

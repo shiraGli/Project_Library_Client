@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=El+Messiri");
+html {
+  box-sizing: border-box;
+  
+}
+html *,
+html *:after,
+html *:before {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  line-height: 1.6;
+  font-family: "El Messiri", sans-serif;
+ 
+}
+body::before {
+    
+  content: " ";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+  background: url("https://images2.imgbox.com/79/66/q4b8r0hu_o.jpg") 0 0/cover no-repeat;
+  z-index: -1;
+ 
+}
+
+.card {
+  
+  font-size: 8px;
+  position: relative;
+  max-width: 26.5em;
+  margin: 2rem auto;
+  padding: 2em;
+  background: #fff;
+  /* display: 'flex';
+  flex-Direction: 'row';
+  justify-Content: 'space-between'
+   */
+   
+}
+
+.card__title {
+  margin: 0 auto 1em;
+  color: #333;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card__img {
+  display: block;
+  width: 20em;
+  max-width: 100%;
+  margin: 1em auto;
+  border-radius: 2px;
+}
+
+.card__text {
+  margin: 2em 5%;
+  color: #646464;
+  font-size: 17px;
+}
+
+.card__btn {
+  display: table;
+  padding: 0.7em 4em;
+  background: #ddba76;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 1em auto 0;
+}
+
+/**
+ * Card #10
+ */
+.card--10 {
+  --mouseX10: 0;
+  --mouseY10: 0;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  
+  /* position: absolute;
+            right: 0;
+} */
+}
+.card--10__svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+.card--10__rect {
+  stroke-dasharray: 50;
+  stroke-dashoffset: calc((var(--mouseY10) + var(--mouseX10)) * 10);
+}
+span{
+    font-size: 18px;
+  }
+
+  .btn-7 {
+    background: linear-gradient(0deg, #ddba76 0%,#ddba76 100%);
+       line-height: 42px;
+      padding: 0;
+      border: none;
+      width: 70px;
+    }
+    .btn-7 span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn-7:before{
+       height: 0%;
+       width: 2px;
+    }
+    .btn-7:after {
+      width: 0%;
+      height: 2px;
+    }
+    .btn-7:hover{
+      color: #ddba76;
+      background: transparent;
+    }
+    .btn-7:hover:before {
+      height: 100%;
+    }
+    .btn-7:hover:after {
+      width: 100%;
+    }
+    .btn-7 span:before,
+    .btn-7 span:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background: rgb(242, 239, 145);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .btn-7 span:before {
+      width: 2px;
+      height: 0%;
+    }
+    .btn-7 span:after {
+      height: 2px;
+      width: 0%;
+    }
+    .btn-7 span:hover:before {
+      height: 100%;
+    }
+    .btn-7 span:hover:after {
+      width: 100%;
+      
+    }
