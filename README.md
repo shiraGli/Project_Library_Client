@@ -1,27 +1,18 @@
-# LibraryClient
+מערכת לניהול ספרייה
+המערכת בנויה משתי צדדים-ניתן להתחבר בתור מנהל וניתן להתחבר בתור לקוח בספרייה.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+עמוד ההתחברות:
+![צילום מסך 2024-09-26 104446](https://github.com/user-attachments/assets/9ac4ab0c-204f-4766-a1f0-9de35b6fd7d5)
+כשהוכנס פרטי מנהל:
+מוצגים לי הלקוחות שנמצאים בספרייה ואת התשלומים שלו.
+![צילום מסך 2024-09-26 104525](https://github.com/user-attachments/assets/8ee5925a-2f60-42be-860f-aec7c4a515cc)
+המנהל גם יכול לצפות בספרים המושאלים וע"י איזה לקוחות.
+![צילום מסך 2024-09-26 104537](https://github.com/user-attachments/assets/2bdfdfef-5cc2-4183-b38e-d5c4989f37b3)
+כאשר מוכנס לקוח שלא קיים-נפתח מסך הרשמה:
+![צילום מסך 2024-09-26 104620](https://github.com/user-attachments/assets/55344018-e4bd-454f-8072-275deaa40d33)
+כאשר מוכנס לקוח קיים נפתח האזור האישי שלו:
+![צילום מסך 2024-09-26 104432](https://github.com/user-attachments/assets/1678ad3d-5e9e-459b-9825-b63738034814)
+שם יש לו אופציה לקחת ספרים לפי מספר הספרים שמוגבל לו להשאלה:
+![צילום מסך 2024-09-26 104243](https://github.com/user-attachments/assets/d9355cd7-95fb-4379-ba5b-a73cf4796866)
+וכמובן אם הספר נמצא במלאי:
+![צילום מסך 2024-09-26 104323](https://github.com/user-attachments/assets/dbd2a995-c0aa-4344-ac0e-f4dc28d8757b)
